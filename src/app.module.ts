@@ -17,7 +17,5 @@ import { SantoshModule } from './santosh/santosh.module';
   providers: [Book, StudentService],
 })
 export class AppModule {
-  constructor(){
-    console.log('app module');
-  }
+  constructor(){}
 }

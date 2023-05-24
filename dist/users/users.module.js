@@ -12,9 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersModule = void 0;
 const common_1 = require("@nestjs/common");
 let UsersModule = class UsersModule {
-    constructor() {
-        console.log('usermodule');
-    }
+    constructor() { }
 };
 UsersModule = __decorate([
     (0, common_1.Module)({}),

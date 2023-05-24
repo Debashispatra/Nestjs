@@ -20,9 +20,7 @@ const student_service_1 = require("./service/student/student.service");
 const student_controller_1 = require("./controller/student/student.controller");
 const santosh_module_1 = require("./santosh/santosh.module");
 let AppModule = class AppModule {
-    constructor() {
-        console.log('app module');
-    }
+    constructor() { }
 };
 AppModule = __decorate([
     (0, common_1.Module)({

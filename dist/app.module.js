@@ -11,10 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const users_module_1 = require("./users/users.module");
 const mongoose_1 = require("@nestjs/mongoose");
-const app_controller_1 = require("./app/app.controller");
-const book_1 = require("./book/book");
 const student_schema_1 = require("./schema/student.schema");
 const student_service_1 = require("./service/student/student.service");
 const student_controller_1 = require("./controller/student/student.controller");
@@ -24,11 +21,11 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [users_module_1.UsersModule, mongoose_1.MongooseModule.forRoot('mongodb://localhost:27017/studentdb'),
+        imports: [mongoose_1.MongooseModule.forRoot('mongodb://localhost:27017/studentdb'),
             mongoose_1.MongooseModule.forFeature([{ name: 'Student', schema: student_schema_1.StudentSchema }]),
             santosh_module_1.SantoshModule],
-        controllers: [app_controller_1.AppController, student_controller_1.StudentController],
-        providers: [book_1.Book, student_service_1.StudentService],
+        controllers: [student_controller_1.StudentController],
+        providers: [student_service_1.StudentService],
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);

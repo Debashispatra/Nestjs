@@ -18,6 +18,7 @@ const book_1 = require("./book/book");
 const student_schema_1 = require("./schema/student.schema");
 const student_service_1 = require("./service/student/student.service");
 const student_controller_1 = require("./controller/student/student.controller");
+const santosh_module_1 = require("./santosh/santosh.module");
 let AppModule = class AppModule {
     constructor() {
         console.log('app module');
@@ -26,7 +27,8 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [users_module_1.UsersModule, mongoose_1.MongooseModule.forRoot('mongodb://localhost:27017/studentdb'),
-            mongoose_1.MongooseModule.forFeature([{ name: 'Student', schema: student_schema_1.StudentSchema }])],
+            mongoose_1.MongooseModule.forFeature([{ name: 'Student', schema: student_schema_1.StudentSchema }]),
+            santosh_module_1.SantoshModule],
         controllers: [app_controller_1.AppController, student_controller_1.StudentController],
         providers: [book_1.Book, student_service_1.StudentService],
     }),
